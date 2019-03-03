@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<properties resource="database.properties"> <!-- Ссылка на файл со свойствами(ссылка на СУБД, логин, пароль и тп.) -->
+	</properties>
+	<settings> <!-- В данном блоке можно настроить много параметров -->
+		<setting name="logImpl" value="SLF4J" /> <!-- SLF4J, LOG4J -->
+	</settings>
+
+	<environments default="development"> <!-- В данном блоке настраиваются подключения к БД -->
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${alldb.driver}" />
+				<property name="url" value="${devdb.url}" />
+				<property name="username" value="${devdb.username}" />
+				<property name="password" value="${devdb.password}" />
+			</dataSource>
+		</environment>
+		<environment id="production">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${alldb.driver}" />
+				<property name="url" value="${proddb.url}" />
+				<property name="username" value="${proddb.username}" />
+				<property name="password" value="${proddb.password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers> <!-- В данном блоке необходимо описать маперы, которые используются в проекте -->
+		<mapper class="com.devix.number.dao.ServiceMapper" />
+	</mappers>
+</configuration>

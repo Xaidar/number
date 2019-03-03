@@ -3,3 +3,5 @@ REST-сервис, выдающий автомобильные номера. Р�
 Примеры вызовов:
 Запрос: GET http://localhost:8080/number/random
 Запрос: GET http://localhost:8080/number/next
+
+Swagger доступен по адресу: http://localhost:8080//swagger-ui.html#

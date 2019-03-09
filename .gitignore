@@ -1,7 +1,7 @@
 /target/
+/lib/
 .mvn
 .idea
 *.iws
 *.iml
 *.ipr
-*lib

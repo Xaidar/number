@@ -3,6 +3,7 @@ package com.devix.number;
 import com.devix.number.controller.MessageController;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -44,6 +45,7 @@ public class NumberApplicationTest {
     }
 
     @Test
+    @Ignore
     public void testRestApi() {
         int responseCode = 0;
         String responseMessage = null;

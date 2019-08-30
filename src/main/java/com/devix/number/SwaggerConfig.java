@@ -27,8 +27,7 @@ public class SwaggerConfig {
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
 				.title("Number API")
-				.description("Number API reference for developers")
-				.termsOfServiceUrl("http://devix.com")
+				.description("License plate generator")
 				.version("0.0.1-SNAPSHOT")
 				.build();
 	}

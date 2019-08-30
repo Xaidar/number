@@ -1,6 +1,4 @@
-/target/
-.mvn
-.idea
-*.iws
+target/
+lib/
+.idea/
 *.iml
-*.ipr
